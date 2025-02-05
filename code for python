@@ -1,0 +1,47 @@
+import random
+def Choice():
+    Choice = random.randrange(0 , 2 , 1)
+    if Choice == 1:
+        return 1
+    return 0
+
+crashed_time = 0
+N = 1000000
+(x , y) = (random.randrange(1 , 4 , 1),random.randrange(1 , 4 , 1))
+(a , b) = (random.randrange(1 , 4 , 1),random.randrange(1 , 4 , 1))
+
+for i in range(N):
+    
+    
+    transverse_x = random.randrange(-3 , 4 , 1)
+    if Choice == 1:
+        
+        horizontal_y = - transverse_x
+    
+    horizontal_y =  transverse_x
+    
+    
+    
+    if Choice == 1:
+        
+        transverse_a =  random.randrange(-1 , 2 , 2)
+        transervse_b = 0
+    
+    horizontal_b =  random.randrange(-1 , 2 , 2)
+    transverse_a = 0
+    
+    
+    
+    x = x + transverse_x
+    y = y + horizontal_y
+    
+    a = a + transverse_a
+    b = b + horizontal_b
+
+        
+    
+    if x == a and y == b:
+        crashed_time = crashed_time + 1
+        
+        
+print(crashed_time / N)
